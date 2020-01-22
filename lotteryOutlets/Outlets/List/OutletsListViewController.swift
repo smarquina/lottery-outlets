@@ -79,8 +79,11 @@ class OutletsListViewController: TLViewController {
                 refreshControl.endRefreshing()
         },
             errorHandler: { (error) in
-                self.showSimpleMessage(title: "Error", message: error.localizedDescription, actionMessage: nil, actionHandler: {})
-                refreshControl.endRefreshing()
+                self.showSimpleMessage(title: "Error",
+                                       message: error.localizedDescription,
+                                       actionMessage: nil,
+                                       actionHandler: {refreshControl.endRefreshing()})
+
         })
     }
 
