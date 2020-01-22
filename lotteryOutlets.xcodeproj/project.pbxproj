@@ -16,6 +16,7 @@
 		7B505F8023D741B700E8F513 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B505F7F23D741B700E8F513 /* Notifications.swift */; };
 		7B505F8923D773C100E8F513 /* outlets.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B505F8823D773C100E8F513 /* outlets.json */; };
 		7B505F8C23D773F500E8F513 /* MockOutletsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B505F8B23D773F500E8F513 /* MockOutletsList.swift */; };
+		7B505F8E23D87CF200E8F513 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7B505F8D23D87CF200E8F513 /* README.md */; };
 		7BD012D823D1C2E500817F05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD012D723D1C2E500817F05 /* AppDelegate.swift */; };
 		7BD012DC23D1C2E500817F05 /* OutletsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD012DB23D1C2E500817F05 /* OutletsListViewController.swift */; };
 		7BD012DF23D1C2E500817F05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD012DD23D1C2E500817F05 /* Main.storyboard */; };
@@ -65,6 +66,7 @@
 		7B505F7F23D741B700E8F513 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		7B505F8823D773C100E8F513 /* outlets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = outlets.json; sourceTree = "<group>"; };
 		7B505F8B23D773F500E8F513 /* MockOutletsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockOutletsList.swift; sourceTree = "<group>"; };
+		7B505F8D23D87CF200E8F513 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7BD012D423D1C2E500817F05 /* Lottery Outlets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lottery Outlets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD012D723D1C2E500817F05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BD012DB23D1C2E500817F05 /* OutletsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutletsListViewController.swift; sourceTree = "<group>"; };
@@ -119,18 +121,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7B505F8A23D773CF00E8F513 /* Moks */ = {
+		7B505F8A23D773CF00E8F513 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
 				7B505F8823D773C100E8F513 /* outlets.json */,
 				7B505F8B23D773F500E8F513 /* MockOutletsList.swift */,
 			);
-			path = Moks;
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		7BD012CB23D1C2E500817F05 = {
 			isa = PBXGroup;
 			children = (
+				7B505F8D23D87CF200E8F513 /* README.md */,
 				7BD012D623D1C2E500817F05 /* lotteryOutlets */,
 				7BD012ED23D1C2E700817F05 /* lotteryOutletsTests */,
 				7BD012F823D1C2E700817F05 /* lotteryOutletsUITests */,
@@ -167,7 +170,7 @@
 		7BD012ED23D1C2E700817F05 /* lotteryOutletsTests */ = {
 			isa = PBXGroup;
 			children = (
-				7B505F8A23D773CF00E8F513 /* Moks */,
+				7B505F8A23D773CF00E8F513 /* Mocks */,
 				7BD012EE23D1C2E700817F05 /* lotteryOutletsTests.swift */,
 				7BD012F023D1C2E700817F05 /* Info.plist */,
 			);
@@ -412,6 +415,7 @@
 			files = (
 				7BD012E423D1C2E600817F05 /* LaunchScreen.storyboard in Resources */,
 				7BD012E123D1C2E600817F05 /* Assets.xcassets in Resources */,
+				7B505F8E23D87CF200E8F513 /* README.md in Resources */,
 				7BD0131923D1E4C200817F05 /* NetworkConfiguration.plist in Resources */,
 				7BD012DF23D1C2E500817F05 /* Main.storyboard in Resources */,
 			);
