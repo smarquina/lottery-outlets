@@ -21,7 +21,7 @@ class OutletsListViewController: TLViewController {
         super.viewDidLoad()
         self.setup()
 
-         NotificationCenter.default.addObserver(self, selector: #selector(self.VeilViewVisibility(_:)), name: .VisibilityVeilView, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.VeilViewVisibility(_:)), name: .VisibilityVeilView, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.reloadTable), name: .RefreshListView, object: nil)
     }
 
@@ -35,7 +35,7 @@ class OutletsListViewController: TLViewController {
         },
             errorHandler: { (error) in
                 NotificationCenter.default.post(name: .VisibilityVeilView, object: false)
-                self.showSimpleMessage(title: "Error", message: error.localizedDescription)
+                self.showSimpleMessage(title: "Error", message: error.localizedDescription, actionMessage: nil, actionHandler: {})
         })
     }
 
@@ -51,6 +51,12 @@ class OutletsListViewController: TLViewController {
         self.presenter = OutletsListPresenter()
         outletsTable.dataSource = presenter
         outletsTable.delegate = presenter
+
+        let refreshControl = UIRefreshControl()
+        refreshControl.tintColor = UIColor.TLColor.green
+        refreshControl.attributedTitle = NSAttributedString(string: "Refrescar administraciones")
+        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+        self.outletsTable.addSubview(refreshControl)
     }
 
     /// Set visibility for veil view
@@ -62,6 +68,20 @@ class OutletsListViewController: TLViewController {
     @objc private func reloadTable() {
         self.outletsCounterLabel.text = String(self.presenter.getData().count)
         self.outletsTable.reloadData()
+    }
+
+
+    /// Refresh all table data. Fetch from network
+    /// - Parameter refreshControl: refresh control
+    @objc private func refreshData(refreshControl: UIRefreshControl) {
+        self.presenter.fetchData(
+            successHandler: {
+                refreshControl.endRefreshing()
+        },
+            errorHandler: { (error) in
+                self.showSimpleMessage(title: "Error", message: error.localizedDescription, actionMessage: nil, actionHandler: {})
+                refreshControl.endRefreshing()
+        })
     }
 
 }

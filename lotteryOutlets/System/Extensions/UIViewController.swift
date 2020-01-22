@@ -41,10 +41,14 @@ extension UIViewController {
     /// - Parameters:
     ///   - title: The title to show.
     ///   - message: The content of the message displayed.
-    func showSimpleMessage(title: String, message: String) {
+    func showSimpleMessage(title: String, message: String, actionMessage: String? , actionHandler: @escaping (() -> ())) {
         let alert = UIAlertController(title: title,
                                       message:message,
                                       preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: actionMessage ?? "Aceptar",
+                                      style: .default,
+                                      handler: { (alert: UIAlertAction!) -> Void in
+                                        actionHandler() }))
         self.present(alert, animated: true)
     }
 }
