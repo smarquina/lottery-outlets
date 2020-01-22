@@ -79,11 +79,11 @@ extension OutletsListViewController: UISearchBarDelegate {
 
     // Asks the delegate if editing should begin in the specified search bar.
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        NotificationCenter.default.post(name: .VisibilityVeilView, object: true)
+
     }
 
     // Asks the delegate if editing should stop in the specified search bar.
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        NotificationCenter.default.post(name: .VisibilityVeilView, object: false)
+
     }
 }

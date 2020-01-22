@@ -12,7 +12,7 @@
         <!--Administraciones-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="OutletsListViewController" customModule="administracionesTL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="OutletsListViewController" customModule="Lottery_Outlets" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hZX-c6-3Yn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -52,7 +52,7 @@
                                         <rect key="frame" x="0.0" y="40" width="414" height="768"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OutletListCellIdentifier" id="fRa-Av-mro" customClass="OutletCell" customModule="administracionesTL" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OutletListCellIdentifier" id="fRa-Av-mro" customClass="OutletCell" customModule="Lottery_Outlets" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="414" height="120.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fRa-Av-mro" id="wiS-Pa-pUO">
@@ -172,11 +172,6 @@
                             <constraint firstItem="x8c-LT-g8T" firstAttribute="centerY" secondItem="QJJ-aX-AoF" secondAttribute="centerY" id="wRJ-JH-CqO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QJJ-aX-AoF"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="x8c-LT-g8T"/>
-                            </mask>
-                        </variation>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="Administraciones" id="YvC-1E-R3J" userLabel="Administraciones"/>

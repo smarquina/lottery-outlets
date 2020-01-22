@@ -112,6 +112,10 @@ extension OutletsListPresenter: UITableViewDataSource, UITableViewDelegate {
             ? tableView.bounds.size.height/2
             : UITableView.automaticDimension
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 
